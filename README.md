@@ -1,25 +1,11 @@
 # landing page
 
-## Installation
+## Project 1 - landing page
+#### What I used: HTML, CSS, Javascript (Vanilla)
 
-Use index.html to start
+### Project Objective
 
-```
-open index.html
-```
-
-## Usage
-
-```
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>JavaScript-Change Navigation Style On Scroll | Active Navigation On Scroll</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" type="image/png" href="code/img/anno.png" />
-</head>
-
+This project was about built a NavBar dynamically as an unordered list.
 
 
 ```
