@@ -1,25 +1,38 @@
-//Change navigation style on scroll
-window.addEventListener('scroll', event => { 
-    let nav = document.querySelector('.nav-container'); 
-    
-    (window.scrollY >= 44) ? nav.classList.add('scroll') : nav.classList.remove('scroll');
-});
 
-//Active navigation on scroll
-window.addEventListener('scroll', event => {
-  let navigationLinks = document.querySelectorAll('nav ul li a');
-  let fromTop = window.scrollY;
- 
-  navigationLinks.forEach(link => {
-    let section = document.querySelector(link.hash);
-   
-    if (
-      section.offsetTop <= fromTop &&
-      section.offsetTop + section.offsetHeight > fromTop
-    ) {
-      link.classList.add('active');
-    } else {
-      link.classList.remove('active');
-    }
+/* global $, altert, console */
+$(function () {
+
+
+  'use strict';
+
+  //header height
+  var myH =$('.header');
+
+  myH.height($(window).height());
+
+  $(window).resize(function () {
+
+    myH.height($(window).height());
+
   });
+
+  //main Active
+
+  $('.main li a').click(function () {
+
+   $(this).parent().addClass('active').siblings().removeClass('active');
+
+  });
+
+   $('.main li a').click(function () {
+
+     $('html, body').animate({
+
+       scrollTop: $('#' + $(this).data('val')).offset().top
+
+     }, 1000);
+
+
+  });
+
 });
